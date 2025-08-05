@@ -8,10 +8,13 @@ export default forwardRef<HTMLInputElement, InputProps>(function Input(InputProp
     <div className={`${classes['input-wrapper']} ${InputProps.containerClassName || ''}`}>
       <label htmlFor={InputProps.id}>{InputProps.label}</label>
       <input
-      {...InputProps}
-      className={`input ${InputProps.inputClassName || ''}`}
-      ref={ref}
-    />
+        {...InputProps}
+        className={`input ${InputProps.inputClassName || ''}`}
+        ref={ref}
+      />
+      {InputProps.errorMessage && (
+        <span className={classes['error-message']}>{InputProps.errorMessage}</span>
+      )}
     </div>
   );
 })
