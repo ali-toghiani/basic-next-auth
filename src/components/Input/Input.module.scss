@@ -1,0 +1,26 @@
+@use '@/styles/_variables.scss' as *;
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  label {
+    margin-bottom: 0.5rem;
+  }
+
+  input {
+    border: 1px solid $input-border-color;
+    border-radius: $border-radius-md;
+    height: 2.5rem;
+    background-color: $background-color;
+    padding: 0.5rem 0.75rem;
+    color: $text-color;
+    font-size: $font-size-base;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+    }
+  }
+}
