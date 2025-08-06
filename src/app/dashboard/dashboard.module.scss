@@ -1,0 +1,45 @@
+@use '@/styles/_variables.scss' as *;
+
+.dashboard-layout {
+  padding: 0;
+  width: 100%;
+  height: 100dvh;
+  background-color: $light-cream;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $text-color;
+
+  header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 2rem;
+    height: 4rem;
+    background-color: $header-bg;
+    margin-bottom: 3rem;
+  }
+
+  button{ 
+    background-color: $error-color;
+    color: $button-text;
+    border: none;
+    padding: $spacing-sm $spacing-md;
+    border-radius: $border-radius-sm;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .user-info-card{
+    background-color: $card-bg;
+    border: 1px solid $header-bg;
+    border-radius: $border-radius-md;
+    padding: $spacing-md;
+    box-shadow: $box-shadow;
+  }
+}
