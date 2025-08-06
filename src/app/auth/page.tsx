@@ -53,9 +53,9 @@ export default function AuthPage() {
 
   return (
     <div className={classes['auth-form-container']}>
-      <h1 className={classes['auth-form-title']}>Login</h1>
+      <h1 className='auth-form-title'>Login</h1>
       <form
-       className={classes['auth-form']}
+       className='auth-form'
        onSubmit={(e) => handleFormSubmit(e)}>
         <Input
           value={phoneNumber}

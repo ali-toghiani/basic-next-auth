@@ -11,9 +11,9 @@ export default function DashboardPage() {
 
   return (
     <section className={classes['user-info-card']}>
-      <div className={classes.dashboard}>
-      <div className={classes.userInfo}>
-        <img src={user.picture.medium} alt="User profile" className={classes.avatar} />
+      <div className='dashboard'>
+      <div className='user-info'>
+        <img src={user.picture.medium} alt="User profile" className='avatar' />
         <h2>{user.name.first} {user.name.last}</h2>
         <p>Email: {user.email}</p>
         <p>Phone: {user.phone}</p>

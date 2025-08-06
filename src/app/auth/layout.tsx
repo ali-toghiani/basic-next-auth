@@ -7,7 +7,7 @@ export default function AuthLayout({
 }>) {
   return (
     <main className={classes['auth-main']}>
-      <section className={classes['form-container']}>
+      <section className='form-container'>
         {children}
       </section>
     </main>
