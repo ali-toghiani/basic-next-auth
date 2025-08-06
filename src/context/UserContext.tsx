@@ -1,7 +1,7 @@
 'use client';
 import { createContext, useState, useEffect, ReactNode } from 'react';
 import { UserContextType } from "@/types/User"
-import { LocalStorageKeys } from '@/enums/local-storage-keys';
+import { LocalStorageKeys } from '@/consts/local-storage-keys';
 
 export const UserContext = createContext<UserContextType>({
   user: null,
