@@ -28,7 +28,7 @@ export const UserProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (user) {
       localStorage.setItem(LocalStorageKeys.USER, JSON.stringify(user));
-      document.cookie = `user=${JSON.stringify(user)}; path=/; max-age=86400`;
+      document.cookie = `user=${JSON.stringify(user)}; path=/; max-age=86400; HttpOnly; Secure; SameSite=Strict`;
     } else {
       localStorage.removeItem(LocalStorageKeys.USER);
       document.cookie = 'user=; path=/; max-age=0';
