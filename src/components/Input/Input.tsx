@@ -3,17 +3,19 @@ import { forwardRef } from 'react';
 import { InputProps } from '@/types/Input';
 import classes from './Input.module.scss';
 
-export default forwardRef<HTMLInputElement, InputProps>(function Input(InputProps: InputProps, ref) {
+export default forwardRef<HTMLInputElement, InputProps>(function Input(
+  { errorMessage, containerClassName, id, label, inputClassName, ...restProps}: InputProps, ref)
+  {
   return (
-    <div className={`${classes['input-wrapper']} ${InputProps.containerClassName || ''}`}>
-      <label htmlFor={InputProps.id}>{InputProps.label}</label>
+    <div className={`${classes['input-wrapper']} ${containerClassName || ''}`}>
+      <label htmlFor={id}>{label}</label>
       <input
-        {...InputProps}
-        className={`input ${InputProps.inputClassName || ''}`}
+        {...restProps}
+        className={`input ${inputClassName || ''}`}
         ref={ref}
       />
-      {InputProps.errorMessage && (
-        <span className={classes['error-message']}>{InputProps.errorMessage}</span>
+      {errorMessage && (
+        <span className={classes['error-message']}>{errorMessage}</span>
       )}
     </div>
   );
